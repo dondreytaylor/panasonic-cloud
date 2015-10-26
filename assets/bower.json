@@ -1,0 +1,27 @@
+{
+  "name": "emit",
+  "version": "0.0.0",
+  "authors": [
+    "Dondrey Taylor <ddt7@njit.edu>"
+  ],
+  "description": "Displays real-time patient vitals read over panasonics EMIT network from various bluetooth le devices.",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "d3":"*",
+    "epoch":"*",
+    "jquery":"*", 
+  	"angular":"*",
+    "bootstrap":"*",
+    "angular-route":"*",
+    "angular-cookie":"*",
+	  "angular-animate":"*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="emitapp">
+	<head>
+		<base href="/">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Panasonic EMIT - Senior Health Care</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{# CSS #}
+		{% for asset in assets.css %}
+			<link rel="stylesheet" href="{{asset}}">
+		{% endfor %}
+		<style>.ng-cloak, *[ng-cloak] { display: none; }</style>
+	</head>
+	<body ng-controller="Emit">
+
+		<header>
+			<h1 ng-click="redirect('/dashboard')">Panasonic</h1>
+			<h3>Remote Patient Care</h3>
+		</header>
+
+		<div ng-view></div>
+
+		{# Saved Popup #}
+		<div id="emit-popup" ng-show="popup.visible" ng-cloak>
+			<div class="emit-popup-overlay">
+				<div class="emit-popup-content">
+					<i ng-if="popup.icon" class="popup-icon icon [[popup.icon]]"></i>
+					<h1 ng-if="popup.text">[[popup.text]]</h1>
+					<p ng-if="popup.paragraph">[[popup.paragraph]]</p>
+				</div>
+				<div class="emit-popup-actions">
+					<button ng-if="!popup.closeable" class="btn btn-inline btn-primary btn-lg" ng-click="popup.redirect(); popup.hide()">
+						<span ng-if="!popup.redirectBtnText">Return to my profile</span>
+						<span ng-if="popup.redirectBtnText">[[popup.redirectBtnText]]</span>
+					</button>
+					<button ng-if="popup.closeable && popup.returnable" class="btn btn-inline btn-primary btn-lg" ng-click="popup.hide()">
+						Thanks got it!
+					</button>
+				</div>
+			</div>
+		</div>
+
+		{# JS #}
+		{% for asset in assets.js %}
+			<script type="text/javascript" src="{{asset}}"></script>
+		{% endfor %}
+	</body>
+</script>

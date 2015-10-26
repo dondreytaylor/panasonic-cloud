@@ -1,0 +1,63 @@
+// Colors
+$optionBorderColor: #CCCCCC;
+$optionBackgroundColor: #DDDDDD;
+$optionHoverBackgroundColor: #FFFFFF;
+$optionHoverTextColor: #EC0A42;
+
+// General Style
+#emit-options 
+{
+	& { 
+		width: 80%;
+		margin: 0 auto;
+		max-width: 64rem;
+		position: relative;
+		text-align: center;
+	}
+
+	& > .option 
+	{ 
+		& { 
+			width: 14rem;
+			height: 14rem;
+			display: inline-block;
+			margin: .5rem;
+			background-color: $optionBackgroundColor;
+			border-color: $optionBorderColor;
+			text-align: center;
+			-o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-top: 1.5rem;
+		}
+
+		&:hover { 
+			cursor: pointer;
+			-webkit-box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			-moz-box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			-ms-box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			-o-box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			background-color: $optionHoverBackgroundColor;
+			color: $optionHoverTextColor;
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			-o-transition: all .5s ease;
+			transition: all .5s ease;
+		}
+
+		& > i { 
+			font-size: 8rem;
+			display: block;
+			margin-bottom: .5rem;
+		}
+
+		& > span { 
+			display: block;
+			font-size: 1.1rem;
+		}
+	}
+}

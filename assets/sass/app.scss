@@ -1,0 +1,99 @@
+
+// Base Style
+@import 'base/ie.scss';
+@import 'base/print.scss';
+@import 'base/screen.scss';
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
+@import 'fonts/helium/style.scss'; 
+
+// Colors
+$headerColor: #0070c0;
+$headerFontColor: #FFFFFF;
+$backgroundColor: #F2F2F2;
+
+// General Style
+body 
+{
+	font-family: "Cabin", sans-serif;
+	font-weight: 400;
+	width: 100vw;
+	height: 100vh;
+	background-color: $backgroundColor; 
+	font-size: 16px;
+}
+
+div[ng-view] 
+{ 
+	width: inherit;
+	height: inherit;
+	padding-top: 5rem;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1 
+{
+	font-size: 3rem;
+}
+
+.emit-form 
+{ 
+	max-width: 30rem;
+	width: 80%;
+	margin: 0 auto;
+}
+
+// Header
+header 
+{ 
+	& {
+		z-index: 10;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 3rem;
+		background-color: $headerColor;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: .5rem 4%;
+	}
+
+	h1 {
+		color: $headerFontColor; 
+		font-size: 2rem;
+	}
+
+	h3 { 
+		float: right;
+		color: $headerFontColor;
+		text-decoration: italic;
+		top: -1.5rem;
+		position: relative;
+		font-size: 1.1rem;
+		opacity: .8;
+	}
+}
+
+
+// Include Pages
+@import 'pages/login.scss';
+@import 'pages/forgot.scss';
+@import 'pages/dashboard.scss';
+@import 'pages/vitals.scss';
+@import 'pages/profile.scss';
+@import 'pages/simulator.scss';
+
+@import 'components/option/style.scss';
+@import 'components/sidebar/style.scss';
+
+
+

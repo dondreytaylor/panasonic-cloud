@@ -1,0 +1,199 @@
+/* line 6, ../../sass/pages/simulator.scss */
+#simulator #device {
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+/* line 15, ../../sass/pages/simulator.scss */
+#simulator #device > .component {
+  padding: 3rem 0;
+  white-space: nowrap;
+}
+/* line 21, ../../sass/pages/simulator.scss */
+#simulator #device > .component:not(:last-child) {
+  border-bottom: 0.0625rem solid #DDD;
+}
+/* line 27, ../../sass/pages/simulator.scss */
+#simulator #device > .component .visual,
+#simulator #device > .component .configuration {
+  width: 50%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 40, ../../sass/pages/simulator.scss */
+#simulator #device > .component .visual {
+  text-align: center;
+  vertical-align: top;
+  padding-top: 3rem;
+}
+/* line 47, ../../sass/pages/simulator.scss */
+#simulator #device > .component .visual .value {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 2rem;
+  color: #666;
+}
+/* line 57, ../../sass/pages/simulator.scss */
+#simulator #device > .component .visual #battery {
+  width: 10rem;
+  height: 3rem;
+  margin: 0 auto;
+  background-color: #DDD;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  border-radius: .5rem;
+  position: relative;
+  padding: .5rem;
+}
+/* line 72, ../../sass/pages/simulator.scss */
+#simulator #device > .component .visual #battery #battery-life {
+  width: 100%;
+  height: 100%;
+  background-color: #CDCDCD;
+}
+/* line 79, ../../sass/pages/simulator.scss */
+#simulator #device > .component .visual #battery #battery-juice {
+  height: inherit;
+  background-color: #14bb14;
+  max-width: 100% !important;
+}
+/* line 86, ../../sass/pages/simulator.scss */
+#simulator #device > .component .visual #battery #battery-terminal {
+  height: 2rem;
+  width: 1rem;
+  background-color: #DDD;
+  -webkit-border-radius: 0 .5rem .5rem 0;
+  -moz-border-radius: 0 .5rem .5rem 0;
+  -ms-border-radius: 0 .5rem .5rem 0;
+  -o-border-radius: 0 .5rem .5rem 0;
+  border-radius: 0 .5rem .5rem 0;
+  position: absolute;
+  right: -.8rem;
+  top: .55rem;
+}
+/* line 105, ../../sass/pages/simulator.scss */
+#simulator #device > .component .configuration {
+  border-left: 1px solid #DDD;
+  padding: 1rem;
+}
+/* line 113, ../../sass/pages/simulator.scss */
+#simulator #device > .component .configuration label {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: .9rem;
+  color: #666;
+}
+/* line 121, ../../sass/pages/simulator.scss */
+#simulator #device > .component .configuration label strong {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 128, ../../sass/pages/simulator.scss */
+#simulator #device > .component .configuration small {
+  font-size: .7rem;
+  color: #666;
+  display: block;
+  margin-top: .5rem;
+}
+
+/* line 1, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch {
+  position: relative;
+  width: 161px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* line 5, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-checkbox {
+  display: none;
+}
+
+/* line 8, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+/* line 12, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+/* line 17, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 22, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-inner:before {
+  content: attr(data-text-on);
+  padding-left: 10px;
+  background-color: #45C134;
+  color: #FFFFFF;
+}
+
+/* line 28, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-inner:after {
+  content: attr(data-text-off);
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+/* line 37, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #FFFFFF;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 127px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* line 45, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+/* line 48, ../../sass/components/onoffswitch/style.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}

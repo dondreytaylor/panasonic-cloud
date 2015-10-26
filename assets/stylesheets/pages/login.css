@@ -1,0 +1,12 @@
+/* line 3, ../../sass/pages/login.scss */
+#emit-login {
+  width: 90%;
+  max-width: 20rem;
+  margin: -15rem auto 0 auto;
+  position: relative;
+  top: 50%;
+}
+/* line 11, ../../sass/pages/login.scss */
+#emit-login #forget-password-link {
+  font-size: .9rem;
+}

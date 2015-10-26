@@ -1,0 +1,31 @@
+<div class="emit-heading">
+	<h1>My Physicians</h1>
+	<p>The following is a list a physicians associated with your profile. To add a physician go <a href="/dashboard/profile/physician">here</a>.
+</div>
+<div class="emit-form" role="form">
+	<div class="emit-data-list">
+		<div class="emit-data-list-entry" ng-repeat="physician in users.physicians">
+			<h2>[[physician.fullname]]</h2>
+			<div>[[physician.affiliation]] <span>|</span> [[physician.primary]] <span>|</span> [[physician.secondary]] <span>|</span> [[physician.emailaddr]]</div>
+		</div>
+	</div>
+</div>
+<div id="emit-sidebar">
+	<div class="emit-sidebar-option" ng-click="path('/dashboard')">
+		<i class="icon icon-home"></i>
+		<span>Dashboard</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/profile')">
+		<i class="icon icon-edit"></i>
+		<span>My Profile</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/vitals')">
+		<i class="icon icon-heart"></i>
+		<span>My Vitals</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/')">
+		<i class="icon icon-exit"></i>
+		<span>Sign Out</span>
+	</div>		
+</div>
+

@@ -1,0 +1,51 @@
+/* line 10, ../../../sass/components/option/style.scss */
+#emit-options {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 64rem;
+  position: relative;
+  text-align: center;
+}
+/* line 20, ../../../sass/components/option/style.scss */
+#emit-options > .option {
+  width: 14rem;
+  height: 14rem;
+  display: inline-block;
+  margin: .5rem;
+  background-color: #dddddd;
+  border-color: #cccccc;
+  text-align: center;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 1.5rem;
+}
+/* line 36, ../../../sass/components/option/style.scss */
+#emit-options > .option:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: #ec0a42;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* line 52, ../../../sass/components/option/style.scss */
+#emit-options > .option > i {
+  font-size: 8rem;
+  display: block;
+  margin-bottom: .5rem;
+}
+/* line 58, ../../../sass/components/option/style.scss */
+#emit-options > .option > span {
+  display: block;
+  font-size: 1.1rem;
+}

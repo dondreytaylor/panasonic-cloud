@@ -1,0 +1,176 @@
+<div ng-controller="Vitals">
+	<div class="device-details">
+		<div class="device-detail">
+			<strong>Name:</strong>
+			<span>[[deviceData.device.deviceName]]</span>
+		</div>
+		<div class="device-detail">
+			<strong>Manufacturer:</strong>
+			<span>[[deviceData.device.deviceManufacturer]]</span>
+		</div>
+		<div class="device-detail">
+			<strong>Bridge:</strong>
+			<span>Beagle Bone Black</span>
+		</div>
+		<div class="device-detail">
+			<strong>Battery Life:</strong>
+			<span>[[deviceData.device.deviceBatteryPercent]]%</span>
+		</div>
+		<div class="device-detail">
+			<strong>Connection:</strong>
+			<span ng-show="deviceData.device.deviceConnected">PAIRED</span>
+			<span ng-show="!deviceData.device.deviceConnected">UNPAIRED</span>
+		</div>
+	</div>
+	<div class="vital-heading">
+		<div>
+			<button class="btn btn-primary btn-lg" ng-click="prev()" ng-disabled="page === 1"><<</button>
+		</div>
+		<div ng-click="disabled = !disabled">[[title]]</div>
+		<div>
+			<button class="btn btn-primary btn-lg" ng-click="next()" ng-disabled="page >= limit">>></button>
+		</div>
+	</div>
+	<!-- Pulse Oximeter -->
+	<div class="vital-page" ng-show="!page || page === 1">
+		<div id="emit-vitals" ng-class="{'disabled': !deviceData.device.deviceConnected}" ng-init="disabled = true; popup.show('Connect Device','icon-equalizer', true, 'To begin taking  your reading, please connect your device.', true)">
+			<div class="stat">
+				<span>Heartbeat</span>
+				<span class="heartbeat" ng-class="{stop: deviceData.device.devicePulseRate == 0}">Heartbeat</span>
+			</div>
+			<div class="stat">
+				<span>Heart Rate</span>
+				{# <h1 periodicrandomizer minimum=70 maximum=80 deviceconnected="deviceData.device.deviceConnected">--</h1> #}
+				<h1 ng-show="!deviceData.device.deviceConnected">--</h1>
+				<h1 ng-show="deviceData.device.deviceConnected">[[deviceData.device.devicePulseRate]]</h1>
+			</div>
+			<div class="stat">
+				<span>Oxygen (Sp0<sub>2</sub>) Readings/Time</span>
+				<linegraph ng-if="page === 1" dataset="deviceData.device" valuename="'deviceSPO2'" deviceconnected="deviceData.device.deviceConnected"></linegraph>
+			</div>
+			<div class="stat">
+				<span>Oxygen (Sp0<sub>2</sub>)</span>
+				{# <h1><span periodicrandomizer minimum=90 maximum=99 deviceconnected="deviceData.device.deviceConnected">--</span><sup>%</sup></h1> #}
+				<h1 ng-show="!deviceData.device.deviceConnected"><span >--</span><sup>%</sup></h1>
+				<h1 ng-show="deviceData.device.deviceConnected"><span>[[deviceData.device.deviceSPO2]]</span><sup>%</sup></h1>
+			</div>
+		</div>
+	</div>
+	<!-- Thermometer -->
+	<div class="vital-page" ng-show="page === 2">
+		<div id="emit-vitals" ng-class="{'disabled': !false}">
+			<div class="stat">
+				<span>Body temperature over time (Fahrenheit)</span>
+				<linegraph ng-if="page === 2" dataset="deviceData.device" deviceconnected="false"></linegraph>
+			</div>
+			<div class="stat">
+				<span>Body Temperature</span>
+				<h1><span periodicrandomizer minimum=97 maximum=98.6 deviceconnected="false">--</span></h1>
+				<small>Fahrenheit - &deg;F</small>
+			</div>
+		</div>
+	</div>
+	<!-- Blood Gluecose Meter -->
+	<div class="vital-page" ng-show="page === 3">
+		<div id="emit-vitals" ng-class="{'disabled': !false}">
+			<div class="stat">
+				<span>Blood Sugar Level over time (mg/dL)</span>
+				<linegraph ng-if="page === 3" dataset="deviceData.device" deviceconnected="false"></linegraph>
+			</div>
+			<div class="stat">
+				<span>Blood Sugar Level</span>
+				<h1><span periodicrandomizer minimum=100 maximum=600 deviceconnected="false">--</span></h1>
+				<small>mg/dL</small>
+			</div>
+		</div>
+	</div>	
+	<!-- Blood Pressure -->
+	<div class="vital-page" ng-show="page === 4">
+		<div id="emit-vitals" ng-class="{'disabled': !false}">
+			<div class="stat">
+				<span>Systolic over time</span>
+				<linegraph ng-if="page === 4" dataset="deviceData.device" deviceconnected="false"></linegraph>
+			</div>
+			<div class="stat">
+				<span>Systolic</span>
+				<h1><span periodicrandomizer minimum=100 maximum=120 deviceconnected="false">--</span></h1>
+				<small>mm HG</small>
+			</div>
+			<div class="stat">
+				<span>Diastolic over time</span>
+				<linegraph ng-if="page === 4" dataset="deviceData.device" deviceconnected="false"></linegraph>
+			</div>
+			<div class="stat">
+				<span>Diastolic</span>
+				<h1><span periodicrandomizer minimum=60 maximum=80 deviceconnected="false">--</span></h1>
+				<small>mm HG</small>
+			</div>
+		</div>
+	</div>
+	<!-- Body Scale -->
+	<div class="vital-page" ng-show="page === 5">
+		<div id="emit-vitals" ng-class="{'disabled': !false}">
+			<div class="stat">
+				<span>Body weight over time (lbs)</span>
+				<linegraph ng-if="page === 5" dataset="deviceData.device" deviceconnected="false"></linegraph>
+			</div>
+			<div class="stat">
+				<span>Body weight (lbs)</span>
+				<h1><span periodicrandomizer minimum=148 maximum=150 deviceconnected="false">--</span></h1>
+				<small>lbs</small>
+			</div>
+		</div>
+	</div>
+	<!-- Stethoscopes-->
+	<div class="vital-page" ng-show="page === 6">
+		<div id="emit-vitals" ng-class="{'disabled': !false}">
+			<div class="stat">
+				<span>Heart Rate (Audio updates every second)</span>
+			</div>
+		</div>
+	</div>	
+	<!-- Pedometer-->
+	<div class="vital-page" ng-show="page === 7">
+		<div id="emit-vitals" ng-class="{'disabled': !false}">
+			<div class="stat">
+				<span>Steps Walked</span>
+				<h1><span periodicrandomizer minimum=148 maximum=150 deviceconnected="false">--</span></h1>
+				<small>steps</small>
+			</div>
+			<div class="stat">
+				<span>Miles Walked</span>
+				<h1><span periodicrandomizer minimum=1 maximum=5 deviceconnected="false">--</span></h1>
+				<small>mi</small>
+			</div>
+			<div class="stat">
+				<span>Average speed (steps per second)</span>
+				<h1><span periodicrandomizer minimum=1 maximum=10 deviceconnected="false">--</span></h1>
+				<small>steps/second</small>
+			</div>
+			<div class="stat">
+				<span>Average calories lost</span>
+				<h1><span periodicrandomizer minimum=20 maximum=30 deviceconnected="false">--</span></h1>
+				<small>steps/second</small>
+			</div>
+		</div>
+	</div>		
+</div>
+
+<div id="emit-sidebar">
+	<div class="emit-sidebar-option" ng-click="path('/dashboard')">
+		<i class="icon icon-home"></i>
+		<span>Dashboard</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/profile')">
+		<i class="icon icon-edit"></i>
+		<span>My Profile</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/alerts')">
+		<i class="icon icon-bell"></i>
+		<span>Alerts</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/')">
+		<i class="icon icon-exit"></i>
+		<span>Sign Out</span>
+	</div>		
+</div>

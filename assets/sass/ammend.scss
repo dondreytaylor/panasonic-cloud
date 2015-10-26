@@ -1,0 +1,213 @@
+html, body { 
+	overflow-x: hidden;
+}
+
+header h1 { 
+	cursor: pointer;
+}
+
+@media (max-width: 1280px) { 
+	div[ng-view] { 
+		padding-top: 8rem;
+	}
+}
+
+.vital-heading { 
+	max-width: 64rem;
+	width: 90%;
+	margin: 2rem auto 1rem auto;
+	white-space: nowrap;
+}
+
+.vital-heading > div {
+	display: inline-block; 
+}
+
+.vital-heading > div:first-child {
+	text-align: left; 
+	width: 15%;
+}
+
+.vital-heading > div:nth-child(2) {
+	text-align: center; 
+	font-size: 2rem;
+	width: 70%;
+	cursor: pointer;
+}
+
+
+.vital-heading > div:last-child { 
+	text-align: right;
+	width: 15%;
+}
+
+@media (max-width: 1024px) { 
+	#emit-vitals > .stat
+	{
+		display: block;
+		width: 100%;
+		margin: 1rem auto;
+	}
+}
+
+.emit-form { 
+	margin-bottom: 10rem;
+}
+
+#emit-vitals { 
+	text-align: center;
+}
+
+#emit-sidebar {
+	right: inherit;
+	left: 0; 
+}
+
+#emit-sidebar > .emit-sidebar-option { 
+	width: 6rem;
+}
+
+
+#emit-sidebar > .emit-sidebar-option:first-child { 
+	border-top-right-radius: .5rem;
+}
+
+#emit-sidebar > .emit-sidebar-option:last-child { 
+	border-bottom-right-radius: .5rem;
+}
+
+@media (max-width: 1280px) { 
+	#emit-sidebar { 
+		top: 3rem; 
+		width: 100%;
+		z-index: 1000;
+	}
+
+	#emit-sidebar > .emit-sidebar-option { 
+		display: inline-block;
+		width: 25%;
+		vertical-align: top;
+		margin: 0;
+		float: left;
+		height: 4rem;
+		padding: .5rem;
+	}
+
+	#emit-sidebar > .emit-sidebar-option i {
+		font-size: 2rem; 
+		margin: 0;
+	}
+
+	#emit-sidebar > .emit-sidebar-option:not(:last-child) { 
+		border-right: 1px dashed #CCC;
+		border-bottom: 0 none;
+	}
+
+	#emit-sidebar > .emit-sidebar-option:first-child { 
+		border-top-right-radius: 0rem;
+		border-top-left-radius: 0rem;
+	}
+
+	#emit-sidebar > .emit-sidebar-option:last-child { 
+		border-bottom-right-radius: 0rem;
+		border-bottom-left-radius: 0rem;
+	}
+}
+
+
+
+#emit-vitals.disabled .stat
+{
+	background-color: #DDD;
+	opacity: .3;
+}
+
+#emit-vitals.disabled .heartbeat { 
+	-webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+	animation-play-state: paused;
+}
+
+#emit-vitals .heartbeat.stop { 
+	-webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+	animation-play-state: paused;
+}
+
+
+#emit-vitals.disabled .heartbeat:not(:required):after, 
+#emit-vitals.disabled .heartbeat:not(:required):before {
+	background: #CCC; 
+}
+
+.emit-heading {
+	text-align: center; 
+}
+
+.emit-heading p,
+.emit-heading h1 { 
+	padding: 1rem;
+}
+
+.emit-popup-overlay i.popup-icon { 
+	font-size: 8rem;
+}
+
+.emit-popup-overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(240,240,240,.98);
+	z-index: 1000;
+	padding-top: 10%;
+	text-align: center;
+}
+
+.emit-popup-overlay h1 {
+	font-size: 4rem; 
+	margin-bottom: 2rem;
+}
+
+.emit-popup-actions { 
+	padding: 2rem 0;
+}
+
+.emit-data-list .emit-data-list-entry { 
+	margin-bottom: 2rem;
+	padding: 1rem;
+	background-color: #EEE;
+	cursor: pointer;
+}
+
+.emit-data-list .emit-data-list-entry:hover { 
+	background-color: #F8F8F8;
+}
+
+.emit-data-list .emit-data-list-entry h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem; 
+}
+
+.emit-data-list .emit-data-list-entry strong { 
+	font-weight: 700;
+}
+
+.emit-data-list .emit-data-list-entry p { 
+	font-size: .9rem;
+}
+
+.emit-data-list .emit-data-list-entry div { 
+	font-size: .9rem;
+}
+
+.emit-data-list .emit-data-list-entry div span { 
+	display: inline-block;
+	margin: .5rem 1rem;
+}
+
+
+
+
+
+
+

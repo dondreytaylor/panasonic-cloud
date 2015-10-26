@@ -1,0 +1,38 @@
+{# Options #}
+<div id="emit-options" ng-show="!section || section === 'dashboard'">
+	<div class="option" ng-click="path('/dashboard/profile/update')">
+		<i class="icon icon-text"></i>
+		<span>Update Profile</span>
+	</div>
+	<div class="option" ng-click="path('/dashboard/profile/guardian')">
+		<i class="icon icon-girl"></i>
+		<span>Add/Update Guardian</span>
+	</div>
+	<div class="option" ng-click="path('/dashboard/profile/physician')">
+		<i class="icon icon-boy"></i>
+		<span>Add/Update Physician</span>
+	</div>
+	<div class="option" ng-click="path('/dashboard/profile/password')">
+		<i class="icon icon-lock"></i>
+		<span>Change Password</span>
+	</div>
+</div>
+
+<div id="emit-sidebar">
+	<div class="emit-sidebar-option" ng-click="path('/dashboard')">
+		<i class="icon icon-home"></i>
+		<span>Dashboard</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/vitals')">
+		<i class="icon icon-heart"></i>
+		<span>My Vitals</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/alerts')">
+		<i class="icon icon-bell"></i>
+		<span>Alerts</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/')">
+		<i class="icon icon-exit"></i>
+		<span>Sign Out</span>
+	</div>		
+</div>

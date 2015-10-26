@@ -1,0 +1,1399 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
+/* line 17, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'helium';
+  src: url("/assets/fonts/helium/helium.eot?bgytse");
+  src: url("/assets/fonts/helium/helium.eot?#iefixbgytse") format("embedded-opentype"), url("/assets/fonts/helium/helium.woff?bgytse") format("woff"), url("/assets/fonts/helium/helium.ttf?bgytse") format("truetype"), url("/assets/fonts/helium/helium.svg?bgytse#helium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 12, ../sass/fonts/helium/style.scss */
+.icon {
+  font-family: 'helium';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 26, ../sass/fonts/helium/style.scss */
+.icon-zip:before {
+  content: "\e600";
+}
+
+/* line 29, ../sass/fonts/helium/style.scss */
+.icon-camera:before {
+  content: "\e601";
+}
+
+/* line 32, ../sass/fonts/helium/style.scss */
+.icon-texttool:before {
+  content: "\e602";
+}
+
+/* line 35, ../sass/fonts/helium/style.scss */
+.icon-text:before {
+  content: "\e603";
+}
+
+/* line 38, ../sass/fonts/helium/style.scss */
+.icon-table:before {
+  content: "\e604";
+}
+
+/* line 41, ../sass/fonts/helium/style.scss */
+.icon-presentation:before {
+  content: "\e605";
+}
+
+/* line 44, ../sass/fonts/helium/style.scss */
+.icon-design:before {
+  content: "\e606";
+}
+
+/* line 47, ../sass/fonts/helium/style.scss */
+.icon-web:before {
+  content: "\e607";
+}
+
+/* line 50, ../sass/fonts/helium/style.scss */
+.icon-gamepad:before {
+  content: "\e608";
+}
+
+/* line 53, ../sass/fonts/helium/style.scss */
+.icon-calculator:before {
+  content: "\e609";
+}
+
+/* line 56, ../sass/fonts/helium/style.scss */
+.icon-keyboard:before {
+  content: "\e60a";
+}
+
+/* line 59, ../sass/fonts/helium/style.scss */
+.icon-desktop:before {
+  content: "\e60b";
+}
+
+/* line 62, ../sass/fonts/helium/style.scss */
+.icon-mobile:before {
+  content: "\e60c";
+}
+
+/* line 65, ../sass/fonts/helium/style.scss */
+.icon-mouse:before {
+  content: "\e60d";
+}
+
+/* line 68, ../sass/fonts/helium/style.scss */
+.icon-watch:before {
+  content: "\e60e";
+}
+
+/* line 71, ../sass/fonts/helium/style.scss */
+.icon-printer:before {
+  content: "\e60f";
+}
+
+/* line 74, ../sass/fonts/helium/style.scss */
+.icon-arrow:before {
+  content: "\e610";
+}
+
+/* line 77, ../sass/fonts/helium/style.scss */
+.icon-coding:before {
+  content: "\e611";
+}
+
+/* line 80, ../sass/fonts/helium/style.scss */
+.icon-quote:before {
+  content: "\e612";
+}
+
+/* line 83, ../sass/fonts/helium/style.scss */
+.icon-trash:before {
+  content: "\e613";
+}
+
+/* line 86, ../sass/fonts/helium/style.scss */
+.icon-magnet:before {
+  content: "\e614";
+}
+
+/* line 89, ../sass/fonts/helium/style.scss */
+.icon-ruller:before {
+  content: "\e615";
+}
+
+/* line 92, ../sass/fonts/helium/style.scss */
+.icon-crop:before {
+  content: "\e616";
+}
+
+/* line 95, ../sass/fonts/helium/style.scss */
+.icon-magic:before {
+  content: "\e617";
+}
+
+/* line 98, ../sass/fonts/helium/style.scss */
+.icon-brush:before {
+  content: "\e618";
+}
+
+/* line 101, ../sass/fonts/helium/style.scss */
+.icon-pentool:before {
+  content: "\e619";
+}
+
+/* line 104, ../sass/fonts/helium/style.scss */
+.icon-hand:before {
+  content: "\e61a";
+}
+
+/* line 107, ../sass/fonts/helium/style.scss */
+.icon-picture:before {
+  content: "\e61b";
+}
+
+/* line 110, ../sass/fonts/helium/style.scss */
+.icon-icecream:before {
+  content: "\e61c";
+}
+
+/* line 113, ../sass/fonts/helium/style.scss */
+.icon-pizza:before {
+  content: "\e61d";
+}
+
+/* line 116, ../sass/fonts/helium/style.scss */
+.icon-cocktail:before {
+  content: "\e61e";
+}
+
+/* line 119, ../sass/fonts/helium/style.scss */
+.icon-doughnut:before {
+  content: "\e61f";
+}
+
+/* line 122, ../sass/fonts/helium/style.scss */
+.icon-burger:before {
+  content: "\e620";
+}
+
+/* line 125, ../sass/fonts/helium/style.scss */
+.icon-coffee:before {
+  content: "\e621";
+}
+
+/* line 128, ../sass/fonts/helium/style.scss */
+.icon-chicken:before {
+  content: "\e622";
+}
+
+/* line 131, ../sass/fonts/helium/style.scss */
+.icon-minimize:before {
+  content: "\e623";
+}
+
+/* line 134, ../sass/fonts/helium/style.scss */
+.icon-maximize:before {
+  content: "\e624";
+}
+
+/* line 137, ../sass/fonts/helium/style.scss */
+.icon-stop:before {
+  content: "\e625";
+}
+
+/* line 140, ../sass/fonts/helium/style.scss */
+.icon-forwards:before {
+  content: "\e626";
+}
+
+/* line 143, ../sass/fonts/helium/style.scss */
+.icon-backwards:before {
+  content: "\e627";
+}
+
+/* line 146, ../sass/fonts/helium/style.scss */
+.icon-pause:before {
+  content: "\e628";
+}
+
+/* line 149, ../sass/fonts/helium/style.scss */
+.icon-play:before {
+  content: "\e629";
+}
+
+/* line 152, ../sass/fonts/helium/style.scss */
+.icon-webcam:before {
+  content: "\e62a";
+}
+
+/* line 155, ../sass/fonts/helium/style.scss */
+.icon-cc:before {
+  content: "\e62b";
+}
+
+/* line 158, ../sass/fonts/helium/style.scss */
+.icon-hd:before {
+  content: "\e62c";
+}
+
+/* line 161, ../sass/fonts/helium/style.scss */
+.icon-bell:before {
+  content: "\e62d";
+}
+
+/* line 164, ../sass/fonts/helium/style.scss */
+.icon-playlist:before {
+  content: "\e62e";
+}
+
+/* line 167, ../sass/fonts/helium/style.scss */
+.icon-refresh:before {
+  content: "\e62f";
+}
+
+/* line 170, ../sass/fonts/helium/style.scss */
+.icon-random:before {
+  content: "\e630";
+}
+
+/* line 173, ../sass/fonts/helium/style.scss */
+.icon-mic:before {
+  content: "\e631";
+}
+
+/* line 176, ../sass/fonts/helium/style.scss */
+.icon-volumeoff:before {
+  content: "\e632";
+}
+
+/* line 179, ../sass/fonts/helium/style.scss */
+.icon-volumeon:before {
+  content: "\e633";
+}
+
+/* line 182, ../sass/fonts/helium/style.scss */
+.icon-equalizer:before {
+  content: "\e634";
+}
+
+/* line 185, ../sass/fonts/helium/style.scss */
+.icon-video:before {
+  content: "\e635";
+}
+
+/* line 188, ../sass/fonts/helium/style.scss */
+.icon-headphones:before {
+  content: "\e636";
+}
+
+/* line 191, ../sass/fonts/helium/style.scss */
+.icon-music:before {
+  content: "\e637";
+}
+
+/* line 194, ../sass/fonts/helium/style.scss */
+.icon-ring:before {
+  content: "\e638";
+}
+
+/* line 197, ../sass/fonts/helium/style.scss */
+.icon-diamond:before {
+  content: "\e639";
+}
+
+/* line 200, ../sass/fonts/helium/style.scss */
+.icon-crown:before {
+  content: "\e63a";
+}
+
+/* line 203, ../sass/fonts/helium/style.scss */
+.icon-cup:before {
+  content: "\e63b";
+}
+
+/* line 206, ../sass/fonts/helium/style.scss */
+.icon-medal:before {
+  content: "\e63c";
+}
+
+/* line 209, ../sass/fonts/helium/style.scss */
+.icon-flash:before {
+  content: "\e63d";
+}
+
+/* line 212, ../sass/fonts/helium/style.scss */
+.icon-rocket:before {
+  content: "\e63e";
+}
+
+/* line 215, ../sass/fonts/helium/style.scss */
+.icon-hanger:before {
+  content: "\e63f";
+}
+
+/* line 218, ../sass/fonts/helium/style.scss */
+.icon-pants:before {
+  content: "\e640";
+}
+
+/* line 221, ../sass/fonts/helium/style.scss */
+.icon-glasses:before {
+  content: "\e641";
+}
+
+/* line 224, ../sass/fonts/helium/style.scss */
+.icon-sox:before {
+  content: "\e642";
+}
+
+/* line 227, ../sass/fonts/helium/style.scss */
+.icon-hat:before {
+  content: "\e643";
+}
+
+/* line 230, ../sass/fonts/helium/style.scss */
+.icon-tie:before {
+  content: "\e644";
+}
+
+/* line 233, ../sass/fonts/helium/style.scss */
+.icon-tshirt:before {
+  content: "\e645";
+}
+
+/* line 236, ../sass/fonts/helium/style.scss */
+.icon-home:before {
+  content: "\e646";
+}
+
+/* line 239, ../sass/fonts/helium/style.scss */
+.icon-confirm:before {
+  content: "\e647";
+}
+
+/* line 242, ../sass/fonts/helium/style.scss */
+.icon-delete:before {
+  content: "\e648";
+}
+
+/* line 245, ../sass/fonts/helium/style.scss */
+.icon-plus:before {
+  content: "\e649";
+}
+
+/* line 248, ../sass/fonts/helium/style.scss */
+.icon-next:before {
+  content: "\e64a";
+}
+
+/* line 251, ../sass/fonts/helium/style.scss */
+.icon-back:before {
+  content: "\e64b";
+}
+
+/* line 254, ../sass/fonts/helium/style.scss */
+.icon-list:before {
+  content: "\e64c";
+}
+
+/* line 257, ../sass/fonts/helium/style.scss */
+.icon-menu:before {
+  content: "\e64d";
+}
+
+/* line 260, ../sass/fonts/helium/style.scss */
+.icon-diagram:before {
+  content: "\e64e";
+}
+
+/* line 263, ../sass/fonts/helium/style.scss */
+.icon-eye:before {
+  content: "\e64f";
+}
+
+/* line 266, ../sass/fonts/helium/style.scss */
+.icon-download:before {
+  content: "\e650";
+}
+
+/* line 269, ../sass/fonts/helium/style.scss */
+.icon-upload:before {
+  content: "\e651";
+}
+
+/* line 272, ../sass/fonts/helium/style.scss */
+.icon-compass:before {
+  content: "\e652";
+}
+
+/* line 275, ../sass/fonts/helium/style.scss */
+.icon-rating:before {
+  content: "\e653";
+}
+
+/* line 278, ../sass/fonts/helium/style.scss */
+.icon-notepad:before {
+  content: "\e654";
+}
+
+/* line 281, ../sass/fonts/helium/style.scss */
+.icon-document:before {
+  content: "\e655";
+}
+
+/* line 284, ../sass/fonts/helium/style.scss */
+.icon-settings:before {
+  content: "\e656";
+}
+
+/* line 287, ../sass/fonts/helium/style.scss */
+.icon-boy:before {
+  content: "\e657";
+}
+
+/* line 290, ../sass/fonts/helium/style.scss */
+.icon-girl:before {
+  content: "\e658";
+}
+
+/* line 293, ../sass/fonts/helium/style.scss */
+.icon-folder:before {
+  content: "\e659";
+}
+
+/* line 296, ../sass/fonts/helium/style.scss */
+.icon-group:before {
+  content: "\e65a";
+}
+
+/* line 299, ../sass/fonts/helium/style.scss */
+.icon-pin:before {
+  content: "\e65b";
+}
+
+/* line 302, ../sass/fonts/helium/style.scss */
+.icon-smile:before {
+  content: "\e65c";
+}
+
+/* line 305, ../sass/fonts/helium/style.scss */
+.icon-send:before {
+  content: "\e65d";
+}
+
+/* line 308, ../sass/fonts/helium/style.scss */
+.icon-timer:before {
+  content: "\e65e";
+}
+
+/* line 311, ../sass/fonts/helium/style.scss */
+.icon-edit:before {
+  content: "\e65f";
+}
+
+/* line 314, ../sass/fonts/helium/style.scss */
+.icon-cart:before {
+  content: "\e660";
+}
+
+/* line 317, ../sass/fonts/helium/style.scss */
+.icon-key:before {
+  content: "\e661";
+}
+
+/* line 320, ../sass/fonts/helium/style.scss */
+.icon-share:before {
+  content: "\e662";
+}
+
+/* line 323, ../sass/fonts/helium/style.scss */
+.icon-lock:before {
+  content: "\e663";
+}
+
+/* line 326, ../sass/fonts/helium/style.scss */
+.icon-unlock:before {
+  content: "\e664";
+}
+
+/* line 329, ../sass/fonts/helium/style.scss */
+.icon-present:before {
+  content: "\e665";
+}
+
+/* line 332, ../sass/fonts/helium/style.scss */
+.icon-message:before {
+  content: "\e666";
+}
+
+/* line 335, ../sass/fonts/helium/style.scss */
+.icon-about:before {
+  content: "\e667";
+}
+
+/* line 338, ../sass/fonts/helium/style.scss */
+.icon-flag:before {
+  content: "\e668";
+}
+
+/* line 341, ../sass/fonts/helium/style.scss */
+.icon-exit:before {
+  content: "\e669";
+}
+
+/* line 344, ../sass/fonts/helium/style.scss */
+.icon-lamp:before {
+  content: "\e66a";
+}
+
+/* line 347, ../sass/fonts/helium/style.scss */
+.icon-calendar:before {
+  content: "\e66b";
+}
+
+/* line 350, ../sass/fonts/helium/style.scss */
+.icon-search:before {
+  content: "\e66c";
+}
+
+/* line 353, ../sass/fonts/helium/style.scss */
+.icon-star:before {
+  content: "\e66d";
+}
+
+/* line 356, ../sass/fonts/helium/style.scss */
+.icon-heart:before {
+  content: "\e66e";
+}
+
+/* line 359, ../sass/fonts/helium/style.scss */
+.icon-unlike:before {
+  content: "\e66f";
+}
+
+/* line 362, ../sass/fonts/helium/style.scss */
+.icon-like:before {
+  content: "\e670";
+}
+
+/* line 18, ../sass/app.scss */
+body {
+  font-family: "Cabin", sans-serif;
+  font-weight: 400;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2f2f2;
+  font-size: 16px;
+}
+
+/* line 28, ../sass/app.scss */
+div[ng-view] {
+  width: inherit;
+  height: inherit;
+  padding-top: 5rem;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 40, ../sass/app.scss */
+h1 {
+  font-size: 3rem;
+}
+
+/* line 45, ../sass/app.scss */
+.emit-form {
+  max-width: 30rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 54, ../sass/app.scss */
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 3rem;
+  background-color: #0070c0;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .5rem 4%;
+}
+/* line 70, ../sass/app.scss */
+header h1 {
+  color: white;
+  font-size: 2rem;
+}
+/* line 75, ../sass/app.scss */
+header h3 {
+  float: right;
+  color: white;
+  text-decoration: italic;
+  top: -1.5rem;
+  position: relative;
+  font-size: 1.1rem;
+  opacity: .8;
+}
+
+/* line 3, ../sass/pages/login.scss */
+#emit-login {
+  width: 90%;
+  max-width: 20rem;
+  margin: -15rem auto 0 auto;
+  position: relative;
+  top: 50%;
+}
+/* line 11, ../sass/pages/login.scss */
+#emit-login #forget-password-link {
+  font-size: .9rem;
+}
+
+/* line 3, ../sass/pages/forgot.scss */
+#emit-forgot {
+  width: 90%;
+  max-width: 25rem;
+  margin: -15rem auto 0 auto;
+  position: relative;
+  top: 50%;
+}
+/* line 11, ../sass/pages/forgot.scss */
+#emit-forgot h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+/* line 16, ../sass/pages/forgot.scss */
+#emit-forgot p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/* line 21, ../sass/pages/forgot.scss */
+#emit-forgot #remember-password-link {
+  font-size: .9rem;
+}
+
+/* line 11, ../sass/pages/vitals.scss */
+.device-details {
+  position: fixed;
+  bottom: 0;
+  background-color: #CCC;
+  width: 100%;
+  padding: .8rem;
+  z-index: 1000;
+}
+@media (max-width: 1100px) {
+  /* line 23, ../sass/pages/vitals.scss */
+  .device-details {
+    display: none;
+  }
+}
+/* line 32, ../sass/pages/vitals.scss */
+.device-details .device-detail {
+  display: inline-block;
+  padding: 0 1rem;
+}
+/* line 38, ../sass/pages/vitals.scss */
+.device-details .device-detail strong {
+  font-weight: 700;
+}
+/* line 43, ../sass/pages/vitals.scss */
+.device-details .device-detail:not(:last-child) {
+  border-right: 1px solid #DDD;
+}
+
+/* line 50, ../sass/pages/vitals.scss */
+.vital-page {
+  padding-bottom: 5rem;
+}
+
+/* line 56, ../sass/pages/vitals.scss */
+#emit-vitals {
+  width: 90%;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+/* line 66, ../sass/pages/vitals.scss */
+#emit-vitals > .stat {
+  width: 45%;
+  display: inline-block;
+  max-width: 30rem;
+  vertical-align: top;
+  background-color: white;
+  padding: 1rem;
+  min-height: 15rem;
+  margin: .5rem;
+}
+/* line 77, ../sass/pages/vitals.scss */
+#emit-vitals > .stat:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: #ec0a42;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* line 93, ../sass/pages/vitals.scss */
+#emit-vitals > .stat > span {
+  display: block;
+  margin: .5rem .5rem 1rem .5rem;
+}
+/* line 100, ../sass/pages/vitals.scss */
+#emit-vitals > .stat h1 {
+  font-size: 7rem;
+}
+/* line 104, ../sass/pages/vitals.scss */
+#emit-vitals > .stat h1 sup {
+  font-size: 4rem;
+}
+/* line 109, ../sass/pages/vitals.scss */
+#emit-vitals > .stat .heartbeat {
+  display: block;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes heartbeat {
+  /* line 91, ../sass/components/heart/style.scss */
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 92, ../sass/components/heart/style.scss */
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 93, ../sass/components/heart/style.scss */
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 94, ../sass/components/heart/style.scss */
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 95, ../sass/components/heart/style.scss */
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+@-moz-keyframes heartbeat {
+  /* line 91, ../sass/components/heart/style.scss */
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 92, ../sass/components/heart/style.scss */
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 93, ../sass/components/heart/style.scss */
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 94, ../sass/components/heart/style.scss */
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 95, ../sass/components/heart/style.scss */
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+@-o-keyframes heartbeat {
+  /* line 91, ../sass/components/heart/style.scss */
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 92, ../sass/components/heart/style.scss */
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 93, ../sass/components/heart/style.scss */
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 94, ../sass/components/heart/style.scss */
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 95, ../sass/components/heart/style.scss */
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  /* line 91, ../sass/components/heart/style.scss */
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 92, ../sass/components/heart/style.scss */
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 93, ../sass/components/heart/style.scss */
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 94, ../sass/components/heart/style.scss */
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 95, ../sass/components/heart/style.scss */
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+/* Styles for old versions of IE */
+/* line 100, ../sass/components/heart/style.scss */
+.heartbeat {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+/* line 106, ../sass/components/heart/style.scss */
+.heartbeat:not(:required) {
+  -webkit-animation: heartbeat 1300ms ease 0s infinite normal;
+  -khtml-animation: heartbeat 1300ms ease 0s infinite normal;
+  -moz-animation: heartbeat 1300ms ease 0s infinite normal;
+  -ms-animation: heartbeat 1300ms ease 0s infinite normal;
+  -o-animation: heartbeat 1300ms ease 0s infinite normal;
+  animation: heartbeat 1300ms ease 0s infinite normal;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 96px;
+  height: 96px;
+  -moz-transform: rotate(45deg) scale(1);
+  -o-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  -webkit-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  moz-transform-origin: 50%, 50%;
+  -o-transform-origin: 50%, 50%;
+  -ms-transform-origin: 50%, 50%;
+  -webkit-transform-origin: 50%, 50%;
+  transform-origin: 50%, 50%;
+}
+/* line 118, ../sass/components/heart/style.scss */
+.heartbeat:not(:required):after, .heartbeat:not(:required):before {
+  position: absolute;
+  content: "";
+  background: #ec0a42;
+}
+/* line 124, ../sass/components/heart/style.scss */
+.heartbeat:not(:required):before {
+  -webkit-border-bottom-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  -webkit-border-top-left-radius: 32px;
+  border-top-left-radius: 32px;
+  background-clip: padding-box;
+  top: 32px;
+  left: 0;
+  width: 96px;
+  height: 64px;
+}
+/* line 132, ../sass/components/heart/style.scss */
+.heartbeat:not(:required):after {
+  -webkit-border-top-right-radius: 32px;
+  border-top-right-radius: 32px;
+  -webkit-border-top-left-radius: 32px;
+  border-top-left-radius: 32px;
+  background-clip: padding-box;
+  top: 0;
+  left: 32px;
+  width: 64px;
+  height: 32px;
+}
+
+/* line 6, ../sass/pages/simulator.scss */
+#simulator #device {
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+/* line 15, ../sass/pages/simulator.scss */
+#simulator #device > .component {
+  padding: 3rem 0;
+  white-space: nowrap;
+}
+/* line 21, ../sass/pages/simulator.scss */
+#simulator #device > .component:not(:last-child) {
+  border-bottom: 0.0625rem solid #DDD;
+}
+/* line 27, ../sass/pages/simulator.scss */
+#simulator #device > .component .visual,
+#simulator #device > .component .configuration {
+  width: 50%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 40, ../sass/pages/simulator.scss */
+#simulator #device > .component .visual {
+  text-align: center;
+  vertical-align: top;
+  padding-top: 3rem;
+}
+/* line 47, ../sass/pages/simulator.scss */
+#simulator #device > .component .visual .value {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 2rem;
+  color: #666;
+}
+/* line 57, ../sass/pages/simulator.scss */
+#simulator #device > .component .visual #battery {
+  width: 10rem;
+  height: 3rem;
+  margin: 0 auto;
+  background-color: #DDD;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  border-radius: .5rem;
+  position: relative;
+  padding: .5rem;
+}
+/* line 72, ../sass/pages/simulator.scss */
+#simulator #device > .component .visual #battery #battery-life {
+  width: 100%;
+  height: 100%;
+  background-color: #CDCDCD;
+}
+/* line 79, ../sass/pages/simulator.scss */
+#simulator #device > .component .visual #battery #battery-juice {
+  height: inherit;
+  background-color: #14bb14;
+  max-width: 100% !important;
+}
+/* line 86, ../sass/pages/simulator.scss */
+#simulator #device > .component .visual #battery #battery-terminal {
+  height: 2rem;
+  width: 1rem;
+  background-color: #DDD;
+  -webkit-border-radius: 0 .5rem .5rem 0;
+  -moz-border-radius: 0 .5rem .5rem 0;
+  -ms-border-radius: 0 .5rem .5rem 0;
+  -o-border-radius: 0 .5rem .5rem 0;
+  border-radius: 0 .5rem .5rem 0;
+  position: absolute;
+  right: -.8rem;
+  top: .55rem;
+}
+/* line 105, ../sass/pages/simulator.scss */
+#simulator #device > .component .configuration {
+  border-left: 1px solid #DDD;
+  padding: 1rem;
+}
+/* line 113, ../sass/pages/simulator.scss */
+#simulator #device > .component .configuration label {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: .9rem;
+  color: #666;
+}
+/* line 121, ../sass/pages/simulator.scss */
+#simulator #device > .component .configuration label strong {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 128, ../sass/pages/simulator.scss */
+#simulator #device > .component .configuration small {
+  font-size: .7rem;
+  color: #666;
+  display: block;
+  margin-top: .5rem;
+}
+
+/* line 1, ../sass/components/onoffswitch/style.scss */
+.onoffswitch {
+  position: relative;
+  width: 161px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* line 5, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-checkbox {
+  display: none;
+}
+
+/* line 8, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+/* line 12, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+/* line 17, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 22, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-inner:before {
+  content: attr(data-text-on);
+  padding-left: 10px;
+  background-color: #45C134;
+  color: #FFFFFF;
+}
+
+/* line 28, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-inner:after {
+  content: attr(data-text-off);
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+/* line 37, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #FFFFFF;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 127px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* line 45, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+/* line 48, ../sass/components/onoffswitch/style.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+/* line 10, ../sass/components/option/style.scss */
+#emit-options {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 64rem;
+  position: relative;
+  text-align: center;
+}
+/* line 20, ../sass/components/option/style.scss */
+#emit-options > .option {
+  width: 14rem;
+  height: 14rem;
+  display: inline-block;
+  margin: .5rem;
+  background-color: #dddddd;
+  border-color: #cccccc;
+  text-align: center;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 1.5rem;
+}
+/* line 36, ../sass/components/option/style.scss */
+#emit-options > .option:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: #ec0a42;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* line 52, ../sass/components/option/style.scss */
+#emit-options > .option > i {
+  font-size: 8rem;
+  display: block;
+  margin-bottom: .5rem;
+}
+/* line 58, ../sass/components/option/style.scss */
+#emit-options > .option > span {
+  display: block;
+  font-size: 1.1rem;
+}
+
+/* line 10, ../sass/components/sidebar/style.scss */
+#emit-sidebar {
+  position: fixed;
+  right: 0;
+  top: 8rem;
+}
+/* line 18, ../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option {
+  cursor: pointer;
+  text-align: center;
+  width: 8rem;
+  height: 7rem;
+  background-color: #dddddd;
+  padding: 1rem;
+}
+/* line 27, ../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option:hover {
+  color: #ec0a42;
+  background-color: white;
+}
+/* line 32, ../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option:first-child {
+  border-top-left-radius: .5rem;
+}
+/* line 36, ../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option:last-child {
+  border-bottom-left-radius: .5rem;
+}
+/* line 40, ../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option:not(:last-child) {
+  border-bottom: 0.0625rem dashed #cccccc;
+}
+/* line 44, ../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option > i {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: .8rem;
+}
+/* line 50, ../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option > span {
+  font-size: .9rem;
+}

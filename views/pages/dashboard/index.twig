@@ -1,0 +1,15 @@
+{# Options #}
+<div id="emit-options" ng-show="!section || section === 'dashboard'">
+	<div class="option" ng-click="path('/dashboard/vitals')">
+		<i class="icon icon-heart"></i>
+		<span>Vitals</span>
+	</div>
+	<div class="option" ng-click="path('/dashboard/profile')">
+		<i class="icon icon-edit"></i>
+		<span>My Profile</span>
+	</div>
+	<div class="option" ng-click="path('/')">
+		<i class="icon icon-exit"></i>
+		<span>Sign Out</span>
+	</div>
+</div>

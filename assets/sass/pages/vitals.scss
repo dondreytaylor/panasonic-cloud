@@ -1,0 +1,118 @@
+// Colors
+$vialBorderColor: #CCCCCC;
+$vialBackgroundColor: #DDDDDD;
+$vialHoverBackgroundColor: #FFFFFF;
+$vialHoverTextColor: #EC0A42;
+$vitalBackground: #FFFFFF;
+
+.device-details 
+{ 
+	&
+	{
+		position: fixed;
+		bottom: 0; 
+		background-color: #CCC;;
+		width: 100%;
+		padding: .8rem;
+		z-index: 1000;
+	}
+
+	@media  (max-width: 1100px)
+	 { 
+		&
+		{
+			display: none;
+		}
+	}
+
+
+	.device-detail
+	{
+		&
+		{
+			display: inline-block;
+			padding: 0 1rem;
+		}
+
+		strong 
+		{
+			font-weight: 700;
+		}
+
+		&:not(:last-child) 
+		{
+			border-right: 1px solid #DDD;
+		}
+	}
+}
+
+.vital-page 
+{
+	padding-bottom: 5rem;
+}
+
+#emit-vitals 
+{
+	& { 
+		width: 90%;
+		max-width: 64rem;
+		margin: 0 auto;
+	}
+
+
+
+	& > .stat 
+	{
+		& { 
+			width: 45%;
+			display: inline-block;
+			max-width: 30rem;
+			vertical-align: top;
+			background-color: $vitalBackground;
+			padding: 1rem;
+			min-height: 15rem;
+			margin: .5rem;
+		}
+
+		&:hover {
+			cursor: pointer; 
+			-webkit-box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			-moz-box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			-ms-box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			-o-box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			box-shadow: 0 .09rem .09rem .09rem rgba(0,0,0,.2);
+			background-color: $vialHoverBackgroundColor;
+			color: $vialHoverTextColor;
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			-o-transition: all .5s ease;
+			transition: all .5s ease;
+		}
+
+		& > span { 
+			display: block;
+			margin: .5rem .5rem 1rem .5rem;
+		}
+
+		h1 
+		{ 
+			& { 
+				font-size: 7rem;
+			}
+
+			sup { 
+				font-size: 4rem;
+			}
+		} 
+
+		.heartbeat { 
+			display: block;
+			margin: 0 auto;
+		}
+	} 
+}
+
+// Heart
+@import 'components/heart/style.scss';
+

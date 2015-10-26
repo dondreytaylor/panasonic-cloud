@@ -1,0 +1,236 @@
+/* line 1, ../sass/ammend.scss */
+html, body {
+  overflow-x: hidden;
+}
+
+/* line 5, ../sass/ammend.scss */
+header h1 {
+  cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  /* line 10, ../sass/ammend.scss */
+  div[ng-view] {
+    padding-top: 8rem;
+  }
+}
+/* line 15, ../sass/ammend.scss */
+.vital-heading {
+  max-width: 64rem;
+  width: 90%;
+  margin: 2rem auto 1rem auto;
+  white-space: nowrap;
+}
+
+/* line 22, ../sass/ammend.scss */
+.vital-heading > div {
+  display: inline-block;
+}
+
+/* line 26, ../sass/ammend.scss */
+.vital-heading > div:first-child {
+  text-align: left;
+  width: 15%;
+}
+
+/* line 31, ../sass/ammend.scss */
+.vital-heading > div:nth-child(2) {
+  text-align: center;
+  font-size: 2rem;
+  width: 70%;
+  cursor: pointer;
+}
+
+/* line 39, ../sass/ammend.scss */
+.vital-heading > div:last-child {
+  text-align: right;
+  width: 15%;
+}
+
+@media (max-width: 1024px) {
+  /* line 46, ../sass/ammend.scss */
+  #emit-vitals > .stat {
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+/* line 53, ../sass/ammend.scss */
+.emit-form {
+  margin-bottom: 10rem;
+}
+
+/* line 57, ../sass/ammend.scss */
+#emit-vitals {
+  text-align: center;
+}
+
+/* line 61, ../sass/ammend.scss */
+#emit-sidebar {
+  right: inherit;
+  left: 0;
+}
+
+/* line 66, ../sass/ammend.scss */
+#emit-sidebar > .emit-sidebar-option {
+  width: 6rem;
+}
+
+/* line 71, ../sass/ammend.scss */
+#emit-sidebar > .emit-sidebar-option:first-child {
+  border-top-right-radius: .5rem;
+}
+
+/* line 75, ../sass/ammend.scss */
+#emit-sidebar > .emit-sidebar-option:last-child {
+  border-bottom-right-radius: .5rem;
+}
+
+@media (max-width: 1280px) {
+  /* line 80, ../sass/ammend.scss */
+  #emit-sidebar {
+    top: 3rem;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* line 86, ../sass/ammend.scss */
+  #emit-sidebar > .emit-sidebar-option {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    margin: 0;
+    float: left;
+    height: 4rem;
+    padding: .5rem;
+  }
+
+  /* line 96, ../sass/ammend.scss */
+  #emit-sidebar > .emit-sidebar-option i {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  /* line 101, ../sass/ammend.scss */
+  #emit-sidebar > .emit-sidebar-option:not(:last-child) {
+    border-right: 1px dashed #CCC;
+    border-bottom: 0 none;
+  }
+
+  /* line 106, ../sass/ammend.scss */
+  #emit-sidebar > .emit-sidebar-option:first-child {
+    border-top-right-radius: 0rem;
+    border-top-left-radius: 0rem;
+  }
+
+  /* line 111, ../sass/ammend.scss */
+  #emit-sidebar > .emit-sidebar-option:last-child {
+    border-bottom-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+  }
+}
+/* line 120, ../sass/ammend.scss */
+#emit-vitals.disabled .stat {
+  background-color: #DDD;
+  opacity: .3;
+}
+
+/* line 125, ../sass/ammend.scss */
+#emit-vitals.disabled .heartbeat {
+  -webkit-animation-play-state: paused;
+  /* Chrome, Safari, Opera */
+  animation-play-state: paused;
+}
+
+/* line 130, ../sass/ammend.scss */
+#emit-vitals .heartbeat.stop {
+  -webkit-animation-play-state: paused;
+  /* Chrome, Safari, Opera */
+  animation-play-state: paused;
+}
+
+/* line 137, ../sass/ammend.scss */
+#emit-vitals.disabled .heartbeat:not(:required):after,
+#emit-vitals.disabled .heartbeat:not(:required):before {
+  background: #CCC;
+}
+
+/* line 141, ../sass/ammend.scss */
+.emit-heading {
+  text-align: center;
+}
+
+/* line 146, ../sass/ammend.scss */
+.emit-heading p,
+.emit-heading h1 {
+  padding: 1rem;
+}
+
+/* line 150, ../sass/ammend.scss */
+.emit-popup-overlay i.popup-icon {
+  font-size: 8rem;
+}
+
+/* line 154, ../sass/ammend.scss */
+.emit-popup-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(240, 240, 240, 0.98);
+  z-index: 1000;
+  padding-top: 10%;
+  text-align: center;
+}
+
+/* line 166, ../sass/ammend.scss */
+.emit-popup-overlay h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* line 171, ../sass/ammend.scss */
+.emit-popup-actions {
+  padding: 2rem 0;
+}
+
+/* line 175, ../sass/ammend.scss */
+.emit-data-list .emit-data-list-entry {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #EEE;
+  cursor: pointer;
+}
+
+/* line 182, ../sass/ammend.scss */
+.emit-data-list .emit-data-list-entry:hover {
+  background-color: #F8F8F8;
+}
+
+/* line 186, ../sass/ammend.scss */
+.emit-data-list .emit-data-list-entry h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* line 191, ../sass/ammend.scss */
+.emit-data-list .emit-data-list-entry strong {
+  font-weight: 700;
+}
+
+/* line 195, ../sass/ammend.scss */
+.emit-data-list .emit-data-list-entry p {
+  font-size: .9rem;
+}
+
+/* line 199, ../sass/ammend.scss */
+.emit-data-list .emit-data-list-entry div {
+  font-size: .9rem;
+}
+
+/* line 203, ../sass/ammend.scss */
+.emit-data-list .emit-data-list-entry div span {
+  display: inline-block;
+  margin: .5rem 1rem;
+}

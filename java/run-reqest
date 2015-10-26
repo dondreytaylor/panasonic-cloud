@@ -1,0 +1,7 @@
+#javac -cp ./lib/emit-oal-6.0.13.jar:./lib/emit-inet-6.0.13.jar:jedis-2.4.2.jar *.java
+
+# jar cf Emit.jar *.class
+
+#java -cp lib/emit-oal-6.0.13.jar:lib/emit-inet-6.0.13.jar:jedis-2.4.2.jar:Emit.jar EmitProvide
+
+java -cp ./lib/emit-oal-6.0.13.jar:./lib/emit-inet-6.0.13.jar:jedis-2.4.2.jar:Emit.jar EmitRequest

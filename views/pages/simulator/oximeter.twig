@@ -1,0 +1,167 @@
+<style>header { display: none; }</style>
+<div id="simulator" ng-controller="Simulator">
+	<div id="device">
+		<div class="component" id="device-details">
+			<div class="visual">
+				<span class="value">[[emit.providerReachable]]</span>
+			</div>
+			<div class="configuration">
+				<div role="form">
+					<div class="form-group">
+						<label>Device <strong>EMIT Providers Reachable</strong></label>
+						<p style='white-space:normal;line-height:1.5;'>In the event of a complete provider connection failure this value will be set to NO. (i.e. If at least one provider is unreacable)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component" id="device-details">
+			<div class="visual">
+				<span class="value">[[emit.deviceBridgeStatus]]</span>
+			</div>
+			<div class="configuration">
+				<div role="form">
+					<div class="form-group">
+						<label>Device <strong>Bridge</strong></label>
+						<input class="form-control" type="text" ng-model="emit.deviceBridge" disabled>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Bridge <strong>State</strong></label>
+					<div class="onoffswitch">
+						<input type="checkbox" ng-model="simulator.bridgeState" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-bridge" ng-checked="simulator.bridgeState">
+						<label class="onoffswitch-label" for="myonoffswitch-bridge">
+							<span class="onoffswitch-inner" data-text-on="DISCONNECT" data-text-off="CONNECT"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component" id="device-connectivity">
+			<div class="visual">
+				<span class="value" ng-show="simulator.inuse">REAL DEVICE</span>
+				<span class="value" ng-show="!simulator.inuse">SIMULATED</span>
+			</div>
+			<div class="configuration">
+				<div role="form">
+					<div class="form-group">
+						<label>Pulse Oximeter <strong>Data Source</strong></label>
+						<div class="onoffswitch">
+							<input type="checkbox" ng-model="simulator.inuse" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-datasource" ng-checked="simulator.inuse">
+							<label class="onoffswitch-label" for="myonoffswitch-datasource">
+								<span class="onoffswitch-inner" data-text-on="SIMULATE" data-text-off="USE DEVICE"></span>
+								<span class="onoffswitch-switch"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component" id="device-details">
+			<div class="visual">
+				<span class="value">[[emit.deviceName]]</span>
+				<span class="value">[[emit.deviceManufacturer]]</span>
+			</div>
+			<div class="configuration">
+				<div role="form">
+					<div class="form-group">
+						<label>Device <strong>Name</strong></label>
+						<input class="form-control" type="text" ng-model="emit.deviceName" placeholder="(e.g. Oximeter)">
+					</div>
+					<div class="form-group">
+						<label>Device <strong>Manufacturer</strong></label>
+						<input class="form-control" type="text" ng-model="emit.deviceManufacturer" placeholder="(e.g. Nonin)">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component" id="device-connectivity">
+			<div class="visual">
+				<span class="value" ng-show="emit.deviceConnected">PAIRED</span>
+				<span class="value" ng-show="!emit.deviceConnected">UNPAIRED</span>
+			</div>
+			<div class="configuration">
+				<div role="form">
+					<div class="form-group">
+						<label>Device <strong>Connectivity Status</strong></label>
+						<div class="onoffswitch" ng-show="simulator.bridgeState">
+							<input type="checkbox" ng-model="emit.deviceConnected" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" ng-checked="emit.deviceConnected">
+							<label class="onoffswitch-label" for="myonoffswitch">
+								<span class="onoffswitch-inner" data-text-on="UNPAIR DEVICE" data-text-off="PAIR DEVICE"></span>
+								<span class="onoffswitch-switch"></span>
+							</label>
+						</div>
+						<h3 ng-show="!simulator.bridgeState">No Bridge Detected</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component" id="device-battery">
+			<div class="visual">
+				<div id="battery">
+					<div id="battery-life">
+						<div id="battery-juice" style="width: [[emit.deviceBatteryPercent]]%"></div>
+					</div>
+					<div id="battery-terminal"></div>
+				</div>
+			</div>
+			<div class="configuration">
+				<div role="form">
+					<div class="form-group">
+						<label>Device <strong>Battery Percent</strong></label>
+						<input class="form-control" type="text" ng-model="emit.deviceBatteryPercent" placeholder="(e.g. 95)">
+						<small>(Value must be between "0" dead  and "100" full)</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component" id="device-spo2">
+			<div class="visual">
+				<span class="value">[[emit.deviceSPO2]]</span>
+			</div>
+			<div class="configuration">
+				<div role="form">
+					<div class="form-group">
+						<label>Device <strong>Sp02 %</strong></label>
+						<input class="form-control" type="text" ng-model="emit.deviceSPO2" disabled placeholder="(e.g. 99)">
+						{# <small>(Auto Generated)</small> #}
+					</div>
+					<div class="form-group">
+						<label>Activate <strong>Reading</strong></label>
+						<div class="onoffswitch">
+							<input type="checkbox" ng-model="simulator.activateSPO2Reading" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-activate-1" ng-checked="simulator.activateSPO2Reading">
+							<label class="onoffswitch-label" for="myonoffswitch-activate-1">
+								<span class="onoffswitch-inner" data-text-on="DEACTIVATE" data-text-off="ACTIVATE"></span>
+								<span class="onoffswitch-switch"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component" id="device-pulserate">
+			<div class="visual">
+				<span class="value">[[emit.devicePulseRate]]</span>
+			</div>
+			<div class="configuration">
+				<div role="form">
+					<div class="form-group">
+						<label>Device <strong>Pulse Rate</strong></label>
+						<input disabled class="form-control" ng-model="emit.devicePulseRate" disabled type="text" placeholder="(e.g. 99)">
+						{# <small>(Auto Generated)</small> #}
+					</div>
+					<div class="form-group">
+						<label>Activate <strong>Reading</strong></label>
+						<div class="onoffswitch">
+							<input type="checkbox" ng-model="simulator.activatePulseRateReading" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-activate-2" ng-checked="simulator.activatePulseRateReading">
+							<label class="onoffswitch-label" for="myonoffswitch-activate-2">
+								<span class="onoffswitch-inner" data-text-on="DEACTIVATE" data-text-off="ACTIVATE"></span>
+								<span class="onoffswitch-switch"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

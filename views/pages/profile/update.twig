@@ -1,0 +1,57 @@
+<div class="emit-heading">
+	<h1>My Profile</h1>
+	<p>Update information pertaining to your personal health profile.</p>
+</div>
+<div class="emit-form" role="form">
+	<div class="form-group">
+		<input ng-model="patient.fullname" type="text" class="form-control" placeholder="Full Name">
+	</div>	
+	<div class="form-group">
+		<input ng-model="patient.address" type="text" class="form-control" placeholder="Address">
+	</div>
+	<div class="form-group">
+		<input ng-model="patient.homephone" type="text" class="form-control" placeholder="Home Number">
+	</div>
+	<div class="form-group">
+		<input ng-model="patient.cellphone" type="text" class="form-control" placeholder="Cell Number">
+	</div>
+	<div class="form-group">
+		<input ng-model="patient.emailaddr" type="text" class="form-control" placeholder="Email Address">
+	</div>
+	<div class="form-group">
+		<input ng-model="patient.height" type="text" class="form-control" placeholder="Height">
+	</div>
+	<div class="form-group">
+		<input ng-model="patient.weight" type="text" class="form-control" placeholder="Weight">
+	</div>
+	<div class="form-group">
+		<input ng-model="patient.age" type="text" class="form-control" placeholder="Age">
+	</div>
+	<div class="form-group">
+		<label>Choose Gender:</label>&nbsp;&nbsp;
+		<input ng-model="patient.gender" type="radio" name="gender" value="male"> Male
+		<input ng-model="patient.gender" type="radio" name="gender" value="female"> Female
+	</div>
+	<button class="btn btn-primary btn-lg btn-block" ng-click="popup.show('Profile Saved', 'icon-confirm')">Save</button>
+</div>
+
+<div id="emit-sidebar">
+	<div class="emit-sidebar-option" ng-click="path('/dashboard')">
+		<i class="icon icon-home"></i>
+		<span>Dashboard</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/profile')">
+		<i class="icon icon-edit"></i>
+		<span>My Profile</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/vitals')">
+		<i class="icon icon-heart"></i>
+		<span>My Vitals</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/')">
+		<i class="icon icon-exit"></i>
+		<span>Sign Out</span>
+	</div>		
+</div>
+
+

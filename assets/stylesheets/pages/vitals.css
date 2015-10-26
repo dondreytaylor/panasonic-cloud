@@ -1,0 +1,337 @@
+/* line 11, ../../sass/pages/vitals.scss */
+.device-details {
+  position: fixed;
+  bottom: 0;
+  background-color: #CCC;
+  width: 100%;
+  padding: .8rem;
+  z-index: 1000;
+}
+@media (max-width: 1100px) {
+  /* line 23, ../../sass/pages/vitals.scss */
+  .device-details {
+    display: none;
+  }
+}
+/* line 32, ../../sass/pages/vitals.scss */
+.device-details .device-detail {
+  display: inline-block;
+  padding: 0 1rem;
+}
+/* line 38, ../../sass/pages/vitals.scss */
+.device-details .device-detail strong {
+  font-weight: 700;
+}
+/* line 43, ../../sass/pages/vitals.scss */
+.device-details .device-detail:not(:last-child) {
+  border-right: 1px solid #DDD;
+}
+
+/* line 50, ../../sass/pages/vitals.scss */
+.vital-page {
+  padding-bottom: 5rem;
+}
+
+/* line 56, ../../sass/pages/vitals.scss */
+#emit-vitals {
+  width: 90%;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+/* line 66, ../../sass/pages/vitals.scss */
+#emit-vitals > .stat {
+  width: 45%;
+  display: inline-block;
+  max-width: 30rem;
+  vertical-align: top;
+  background-color: white;
+  padding: 1rem;
+  min-height: 15rem;
+  margin: .5rem;
+}
+/* line 77, ../../sass/pages/vitals.scss */
+#emit-vitals > .stat:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.09rem 0.09rem 0.09rem rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: #ec0a42;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* line 93, ../../sass/pages/vitals.scss */
+#emit-vitals > .stat > span {
+  display: block;
+  margin: .5rem .5rem 1rem .5rem;
+}
+/* line 100, ../../sass/pages/vitals.scss */
+#emit-vitals > .stat h1 {
+  font-size: 7rem;
+}
+/* line 104, ../../sass/pages/vitals.scss */
+#emit-vitals > .stat h1 sup {
+  font-size: 4rem;
+}
+/* line 109, ../../sass/pages/vitals.scss */
+#emit-vitals > .stat .heartbeat {
+  display: block;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes heartbeat {
+  /* line 91, ../../sass/components/heart/style.scss */
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 92, ../../sass/components/heart/style.scss */
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 93, ../../sass/components/heart/style.scss */
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 94, ../../sass/components/heart/style.scss */
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 95, ../../sass/components/heart/style.scss */
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+@-moz-keyframes heartbeat {
+  /* line 91, ../../sass/components/heart/style.scss */
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 92, ../../sass/components/heart/style.scss */
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 93, ../../sass/components/heart/style.scss */
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 94, ../../sass/components/heart/style.scss */
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 95, ../../sass/components/heart/style.scss */
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+@-o-keyframes heartbeat {
+  /* line 91, ../../sass/components/heart/style.scss */
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 92, ../../sass/components/heart/style.scss */
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 93, ../../sass/components/heart/style.scss */
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 94, ../../sass/components/heart/style.scss */
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 95, ../../sass/components/heart/style.scss */
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  /* line 91, ../../sass/components/heart/style.scss */
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 92, ../../sass/components/heart/style.scss */
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 93, ../../sass/components/heart/style.scss */
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* line 94, ../../sass/components/heart/style.scss */
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -o-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  /* line 95, ../../sass/components/heart/style.scss */
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -o-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+/* Styles for old versions of IE */
+/* line 100, ../../sass/components/heart/style.scss */
+.heartbeat {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+/* line 106, ../../sass/components/heart/style.scss */
+.heartbeat:not(:required) {
+  -webkit-animation: heartbeat 1300ms ease 0s infinite normal;
+  -khtml-animation: heartbeat 1300ms ease 0s infinite normal;
+  -moz-animation: heartbeat 1300ms ease 0s infinite normal;
+  -ms-animation: heartbeat 1300ms ease 0s infinite normal;
+  -o-animation: heartbeat 1300ms ease 0s infinite normal;
+  animation: heartbeat 1300ms ease 0s infinite normal;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 96px;
+  height: 96px;
+  -moz-transform: rotate(45deg) scale(1);
+  -o-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  -webkit-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  moz-transform-origin: 50%, 50%;
+  -o-transform-origin: 50%, 50%;
+  -ms-transform-origin: 50%, 50%;
+  -webkit-transform-origin: 50%, 50%;
+  transform-origin: 50%, 50%;
+}
+/* line 118, ../../sass/components/heart/style.scss */
+.heartbeat:not(:required):after, .heartbeat:not(:required):before {
+  position: absolute;
+  content: "";
+  background: #ec0a42;
+}
+/* line 124, ../../sass/components/heart/style.scss */
+.heartbeat:not(:required):before {
+  -webkit-border-bottom-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  -webkit-border-top-left-radius: 32px;
+  border-top-left-radius: 32px;
+  background-clip: padding-box;
+  top: 32px;
+  left: 0;
+  width: 96px;
+  height: 64px;
+}
+/* line 132, ../../sass/components/heart/style.scss */
+.heartbeat:not(:required):after {
+  -webkit-border-top-right-radius: 32px;
+  border-top-right-radius: 32px;
+  -webkit-border-top-left-radius: 32px;
+  border-top-left-radius: 32px;
+  background-clip: padding-box;
+  top: 0;
+  left: 32px;
+  width: 64px;
+  height: 32px;
+}

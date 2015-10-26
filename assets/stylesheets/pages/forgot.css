@@ -1,0 +1,22 @@
+/* line 3, ../../sass/pages/forgot.scss */
+#emit-forgot {
+  width: 90%;
+  max-width: 25rem;
+  margin: -15rem auto 0 auto;
+  position: relative;
+  top: 50%;
+}
+/* line 11, ../../sass/pages/forgot.scss */
+#emit-forgot h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+/* line 16, ../../sass/pages/forgot.scss */
+#emit-forgot p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/* line 21, ../../sass/pages/forgot.scss */
+#emit-forgot #remember-password-link {
+  font-size: .9rem;
+}

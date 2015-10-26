@@ -1,0 +1,139 @@
+$heartbeat-color: #EC0A42;
+$heartbeat-size: 96px; // must be divisible by 2 and 3
+$heartbeat-rotation: rotate(45deg);
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content }
+  @-moz-keyframes #{$name} { @content }
+  @-o-keyframes #{$name} { @content }
+  @keyframes #{$name} { @content }
+}
+
+@mixin experimental($property, $value, $moz: true, $webkit: true, $o: true, $ms: true, $khtml: true, $official: true) {
+  @if $webkit   { -webkit-#{$property} : $value; }
+  @if $khtml    {  -khtml-#{$property} : $value; }
+  @if $moz      {    -moz-#{$property} : $value; }
+  @if $ms       {     -ms-#{$property} : $value; }
+  @if $o        {      -o-#{$property} : $value; }
+  @if $official {         #{$property} : $value; }
+}
+
+@mixin animation($value) {
+  @include experimental(animation, $value);
+}
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($x, $y) {
+    moz-transform-origin: $x,$y;
+       -o-transform-origin: $x,$y;
+      -ms-transform-origin: $x,$y;
+  -webkit-transform-origin: $x,$y;
+          transform-origin: $x,$y;
+}
+
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+   -webkit-border-top-left-radius: $radius;
+   border-top-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+     -webkit-border-top-right-radius: $radius;
+     border-top-right-radius: $radius;
+     background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+   border-bottom-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+     -webkit-border-top-left-radius: $radius;
+     border-top-left-radius: $radius;
+     background-clip: padding-box;
+}
+
+
+@include keyframes(heartbeat) {
+  0%  { @include transform($heartbeat-rotation scale(1));   }
+  14% { @include transform($heartbeat-rotation scale(1.3)); }
+  28% { @include transform($heartbeat-rotation scale(1));   }
+  42% { @include transform($heartbeat-rotation scale(1.3)); }
+  70% { @include transform($heartbeat-rotation scale(1));   }
+}
+
+
+/* Styles for old versions of IE */
+.heartbeat {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+.heartbeat:not(:required) {
+  @include animation(heartbeat 1300ms ease 0s infinite normal);
+  
+  display: inline-block;
+  position: relative;  
+  overflow: hidden;
+  text-indent: -9999px;
+  width: $heartbeat-size;  
+  height: $heartbeat-size;
+  @include transform($heartbeat-rotation scale(1));
+  @include transform-origin(50%, 50%);
+  
+  &:after, &:before {
+    position: absolute;
+    content: "";  
+    background: $heartbeat-color;
+  }
+  
+  &:before {
+    @include border-left-radius($heartbeat-size / 3);
+    top: ($heartbeat-size/3);
+    left: 0;
+    width: $heartbeat-size;
+    height: (2 * $heartbeat-size / 3);
+  }
+  
+  &:after {
+    @include border-top-radius($heartbeat-size / 3);
+    top: 0;
+    left: ($heartbeat-size / 3);
+    width: (2 * $heartbeat-size / 3);
+    height: ($heartbeat-size / 3);
+  }
+}

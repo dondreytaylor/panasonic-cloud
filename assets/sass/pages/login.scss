@@ -1,0 +1,14 @@
+#emit-login 
+{
+	& { 
+		width: 90%;
+		max-width: 20rem;
+		margin: -15rem auto 0 auto;
+		position: relative;
+		top: 50%;
+	}
+
+	#forget-password-link { 
+		font-size: .9rem;
+	}
+}

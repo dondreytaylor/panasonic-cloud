@@ -1,0 +1,13 @@
+{
+  "name": "Elastic-Beanstalk-Sample-App",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.10.1",
+    "express": "*",
+    "node-minify": "*",
+    "redis": "^0.12.1",
+    "swig": "*",
+    "twig": "*"
+  }
+}

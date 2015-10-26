@@ -1,0 +1,42 @@
+/* line 10, ../../../sass/components/sidebar/style.scss */
+#emit-sidebar {
+  position: fixed;
+  right: 0;
+  top: 8rem;
+}
+/* line 18, ../../../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option {
+  cursor: pointer;
+  text-align: center;
+  width: 8rem;
+  height: 7rem;
+  background-color: #dddddd;
+  padding: 1rem;
+}
+/* line 27, ../../../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option:hover {
+  color: #ec0a42;
+  background-color: white;
+}
+/* line 32, ../../../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option:first-child {
+  border-top-left-radius: .5rem;
+}
+/* line 36, ../../../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option:last-child {
+  border-bottom-left-radius: .5rem;
+}
+/* line 40, ../../../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option:not(:last-child) {
+  border-bottom: 0.0625rem dashed #cccccc;
+}
+/* line 44, ../../../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option > i {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: .8rem;
+}
+/* line 50, ../../../sass/components/sidebar/style.scss */
+#emit-sidebar > .emit-sidebar-option > span {
+  font-size: .9rem;
+}

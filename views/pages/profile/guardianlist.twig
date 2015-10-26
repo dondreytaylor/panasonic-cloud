@@ -1,0 +1,31 @@
+<div class="emit-heading">
+	<h1>My Guardians</h1>
+	<p>The following is a list a guardians associated with your profile. To add a guardian go <a href="/dashboard/profile/guardian">here</a>.
+</div>
+<div class="emit-form" role="form">
+	<div class="emit-data-list">
+		<div class="emit-data-list-entry" ng-repeat="guardian in users.guardians">
+			<h2>[[guardian.fullname]]</h2>
+			<div>[[guardian.homephone]] <span>|</span> [[guardian.cellphone]] <span>|</span> [[guardian.emailaddr]]</div>
+		</div>
+	</div>
+</div>
+<div id="emit-sidebar">
+	<div class="emit-sidebar-option" ng-click="path('/dashboard')">
+		<i class="icon icon-home"></i>
+		<span>Dashboard</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/profile')">
+		<i class="icon icon-edit"></i>
+		<span>My Profile</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/dashboard/vitals')">
+		<i class="icon icon-heart"></i>
+		<span>My Vitals</span>
+	</div>
+	<div class="emit-sidebar-option" ng-click="path('/')">
+		<i class="icon icon-exit"></i>
+		<span>Sign Out</span>
+	</div>		
+</div>
+
